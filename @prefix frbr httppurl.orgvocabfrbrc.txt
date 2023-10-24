@@ -1,0 +1,21 @@
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+
+# Work
+<http://example.org/work/the-man-with-the-red-tie> a frbr:Work ;
+   frbr:title "The Man with the Red Tie" ;
+   dc:creator "Houshang Golshiri" .
+
+# Expression
+<http://example.org/expression/the-man-with-the-red-tie-english> a frbr:Expression ;
+   frbr:language "English" ;
+   frbr:literaryForm "Prose" ;
+   frbr:realizationOf <http://example.org/work/the-man-with-the-red-tie> .
+
+# Manifestation
+<http://example.org/manifestation/first-edition> a frbr:Manifestation ;
+   frbr:title "First Edition" ;
+   dc:date "YYYY-MM-DD" ;  # Replace with the actual publication date, e.g., "1970-05-15"
+   dc:publisher "Publisher Name" ;
+   frbr:format "Paperback" ;
+   frbr:embodimentOf <http://example.org/expression/the-man-with-the-red-tie-english> .
